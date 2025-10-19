@@ -1,10 +1,11 @@
-// Soft fade-in animation
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
-  sections.forEach((sec, i) => {
-    setTimeout(() => {
-      sec.style.opacity = "1";
-      sec.style.transform = "translateY(0)";
-    }, 400 * i);
+// Fade-in animation when sections appear
+const sections = document.querySelectorAll(".fade-in");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
   });
 });
+sections.forEach(sec => observer.observe(sec));
