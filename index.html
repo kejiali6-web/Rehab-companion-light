@@ -1,178 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rehab Companion Light — Engineering Compassion | Kejia Liu</title>
-  <meta name="description" content="Designing assistive tools that restore movement — and dignity — for stroke survivors. Public build log by Kejia Liu." />
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehab Companion Light | Kejia Liu</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <main class="site">
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Rehab Companion Light</h1>
+      <p class="tagline">Empowering stroke survivors with assistive devices that respond to effort — not just motion.</p>
+      <p class="author">by Kejia Liu</p>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <header class="hero" id="home">
-      <div class="hero-inner container">
-        <div class="hero-copy">
-          <h1 class="site-title">Rehab Companion Light</h1>
-          <p class="subtitle">Empowering stroke survivors with assistive devices that respond to effort — not just motion.</p>
-          <p class="lead-quote">“More than losing control of my body, I fear losing the dignity and independence that make me human.”</p>
-          <p class="byline">— <strong>Kejia Liu</strong></p>
-          <div class="cta-row">
-            <a class="btn primary" href="#build">Follow the build log →</a>
-            <a class="btn ghost" href="#what">What I'm exploring</a>
-          </div>
-        </div>
+  <!-- STORY SECTION -->
+  <section class="story fade-in">
+    <h2>Story / Problem & Motivation</h2>
+    <p>My grandfather — once strong and independent — lost sensation on the right side of his body and his ability to speak after a diabetic stroke. During his recovery, he fought not only to regain control of his body, but to reclaim his dignity.</p>
 
-        <div class="hero-art" aria-hidden="true">
-          <!-- center glow + SVG hand outline -->
-          <div class="hero-glow">
-            <svg viewBox="0 0 420 420" class="hand-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="glowing hand outline">
-              <defs>
-                <radialGradient id="g1" cx="50%" cy="45%" r="50%">
-                  <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
-                  <stop offset="60%" stop-color="#A5C8FF" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#071427" stop-opacity="0"/>
-                </radialGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="6.5" result="coloredBlur"/>
-                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                </filter>
-              </defs>
+    <div class="image-container">
+      <img src="images.jpg" class="story-image">
+    </div>
 
-              <circle cx="210" cy="180" r="95" fill="url(#g1)" class="center-glow"/>
+    <blockquote>“More than losing control of my body, I fear losing the dignity and independence that make me human.”</blockquote>
 
-              <!-- stylized hand outline (editable path) -->
-              <path class="hand-path" d="M120 240 C110 190 140 150 170 140 C185 135 200 145 210 160 C220 175 220 200 230 210 C240 220 270 215 290 200 C305 190 320 170 330 160" fill="none" stroke="#FFB6A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <p>Through caring for him, I witnessed how rehabilitation challenges go beyond physical limits — they test a person’s patience, pride, and hope.</p>
+  </section>
 
-              <!-- assistive device arc -->
-              <path class="device-path" d="M80 260 C120 230 160 220 200 230 C240 240 280 260 320 265" fill="none" stroke="#42A5F5" stroke-width="4" stroke-linecap="round" />
-            </svg>
-          </div>
-        </div>
+  <!-- PROBLEM DIARY -->
+  <section class="diary fade-in">
+    <h2>Problem Observation Diary</h2>
+    <ul>
+      <li>Rehabilitation is slow and fragile — small setbacks can cause patients to lose motivation.</li>
+      <li>Caregivers struggle to balance assistance with patient privacy during toileting or dressing.</li>
+      <li>Loss of speech limits communication, leading to emotional isolation and unmet needs.</li>
+      <li>Reduced mobility leads to social withdrawal, which worsens long-term recovery.</li>
+    </ul>
+  </section>
+
+  <!-- RESEARCH SECTION -->
+  <section class="research fade-in">
+    <h2>Research & Inspiration</h2>
+    <p>I have been exploring literature and fieldwork to understand the physiological and emotional dimensions of diabetic stroke recovery. My readings include:</p>
+    <blockquote>
+      Zubkovs, Vitalijs, et al. “Bioengineering a Glucose Oxidase Nanosensor for Near-Infrared Continuous Glucose Monitoring.” <em>Nanoscale Advances</em>, 2022.<br><br>
+      Feldman, Eva L., et al. “Diabetic Neuropathy.” <em>Nature Reviews Disease Primers</em>, vol. 5, no. 1, 41, 2019. <a href="https://doi.org/10.1038/s41572-019-0092-1">DOI link</a>.<br><br>
+      Kim, Sehee, et al. “Dysregulated Hypothalamic–Pituitary–Adrenal Axis Is Associated With Increased Inflammation and Worse Outcomes After Ischemic Stroke in Diabetic Mice.” <em>Frontiers in Immunology</em>, vol. 13, 864858, 2022. <a href="https://doi.org/10.3389/fimmu.2022.864858">DOI link</a>.
+    </blockquote>
+    <p>These studies deepen my understanding of how diabetes alters neural pathways and recovery responses — crucial for designing more adaptive, sensor-integrated rehabilitation tools.</p>
+  </section>
+
+  <!-- FACTORY SECTION -->
+  <section class="factory fade-in">
+    <h2>Visiting Huiyang Medical Equipment Factory</h2>
+    <p>
+      During my field research, I visited <strong>Huiyang Medical Equipment Co., Ltd.</strong>, a rehabilitation device manufacturer producing electric and manual wheelchairs, rollators, and shower chairs.
+      Observing their production lines — from aluminum alloy frames to ergonomic mesh seating — gave me insight into how engineering design translates into human comfort and accessibility.
+    </p>
+    <p>
+      Huiyang’s designs emphasize mechanical safety, stability, and lightweight structure. This inspired me to consider integrating soft robotics and sensor feedback for monitoring patient posture, grip strength, and fatigue in real-time, improving user autonomy and confidence.
+    </p>
+    <p class="source">Source: Huiyang Medical Equipment Co., Ltd., 2025 Product Catalog.</p>
+  </section>
+
+  <!-- EXPLORING SECTION -->
+  <section class="exploring fade-in">
+    <h2>What I’m Exploring</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Core Problem</h3>
+        <p>Current rehabilitation tools often lack human-centered design — focusing on movement, not motivation.</p>
       </div>
-    </header>
-
-    <!-- STORY -->
-    <section id="story" class="section story container fade-in">
-      <div class="story-grid">
-        <figure class="story-photo">
-          <img src="assets/images/grandfather.jpg" alt="Grandfather at home (placeholder)." />
-        </figure>
-        <div class="story-copy">
-          <h2>Story — Problem & Motivation</h2>
-          <section id="story">
-  <h2>Story / Problem & Motivation</h2>
-  <p>My grandfather, once strong and independent, lost movement on the right side of his body after a stroke...</p>
-
-  <!-- 插入图片 -->
-  <div class="image-container">
-    <img src="images.jpg" alt="My grandfather during rehabilitation" class="story-image">
-  </div>
-</section>
-
-          <p>My grandfather, once a proud and independent man, lost sensation on his right side after a stroke. Recovery was no longer just about movement — it was about reclaiming dignity.</p>
-          <blockquote class="quote">“More than losing control of my body, I fear losing the dignity and independence that make me human.”</blockquote>
-          <p>Through caring for him, I witnessed how rehabilitation challenges go beyond physical limits — they test a person’s patience, pride, and hope.</p>
-        </div>
+      <div class="card">
+        <h3>Technical Frontier</h3>
+        <p>Exploring glucose nanosensors, wearable robotics, and adaptive feedback systems for stroke patients.</p>
       </div>
-    </section>
-
-    <!-- PROBLEM DIARY -->
-    <section id="diary" class="section diary container fade-in">
-      <h2>Problem Observation Diary</h2>
-      <ul class="observations">
-        <li><strong>Slow, fragile progress:</strong> Rehabilitation is step-by-step. Patients often lose motivation after small setbacks.</li>
-        <li><strong>Privacy vs. care:</strong> Caregivers struggle to balance assistance with preserving patient privacy during toileting and dressing.</li>
-        <li><strong>Lost voice:</strong> Patients with speech loss can't express needs, causing emotional isolation and unmet requirements.</li>
-        <li><strong>Social isolation:</strong> Reduced mobility limits activity and social contact, harming long-term recovery motivation.</li>
-      </ul>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" class="section research container fade-in">
-      <h2>Research & Inspiration</h2>
-      <p>To ground this work I reviewed literature and field research. A key paper I studied is:</p>
-      <blockquote class="citation">
-        Zubkovs, Vitalijs, et al. “Bioengineering a Glucose Oxidase Nanosensor for Near-Infrared Continuous Glucose Monitoring.” <em>Nanoscale Advances</em>, vol. 4, no. 11, 2022.
-      </blockquote>
-      <p>I also visited a medical-device factory to map product types and understand production constraints — combining scientific reading with on-the-ground observation.</p>
-    </section>
-
-    <!-- EXPLORING -->
-    <section id="what" class="section explore container fade-in">
-      <h2>What I'm exploring</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">🧩</div>
-          <h3>Core Problem</h3>
-          <p>Current rehab tools focus on metrics, not emotional response. How can devices restore both movement and dignity?</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🔬</div>
-          <h3>Technical Frontier</h3>
-          <p>Exploring sensing (nanosensors / pressure / EMG) and soft-actuation approaches to create intuitive feedback for patients.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🗣️</div>
-          <h3>Market & Empathy</h3>
-          <p>Factory visits, interviews with carers, and firsthand patient observations inform design constraints and values.</p>
-        </article>
+      <div class="card">
+        <h3>Market & Empathy</h3>
+        <p>From factory visits to patient interviews — combining design, empathy, and engineering.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- BUILD -->
-    <section id="build" class="section build container fade-in">
-      <h2>What I'm building</h2>
-      <div class="build-grid">
-        <div class="build-left">
-          <h3>Rehab Companion Light</h3>
-          <p><em>My vision is to create assistive medical tools that blend empathy and engineering — empowering patients to regain independence, one small motion at a time.</em></p>
-          <p>Planned features:</p>
-          <ul>
-            <li>Light-based feedback responding to small gestures (squeeze, lift, press).</li>
-            <li>Low-cost hardware: microcontroller + pressure sensor + LED ring.</li>
-            <li>Simple UI for caregivers to adjust sensitivity and modes.</li>
-            <li>Public build log documenting sketches, tests, and reflections.</li>
-          </ul>
-        </div>
+  <!-- BUILDING SECTION -->
+  <section class="building fade-in">
+    <h2>What I’m Building</h2>
+    <p>My goal is to design assistive medical tools that blend empathy and engineering — empowering patients to regain independence, one small motion at a time.</p>
+    <p>This site is the beginning of my public build log, where I document how compassion becomes engineering — from idea sketches to physical prototypes.</p>
+  </section>
 
-      <p class="note small">This is the beginning of my public build log — documenting how empathy becomes engineering. Each week, I’ll share design sketches, technical learning, and personal reflections.</p>
-    </section>
+  <!-- NEXT STEP SECTION -->
+  <section class="next-step fade-in">
+    <h2>Next Steps</h2>
+    <ul>
+      <li>Build a prototype using sensor and light feedback.</li>
+      <li>Test with users and gather data.</li>
+      <li>Share weekly progress updates and reflections.</li>
+    </ul>
+  </section>
 
-    <!-- NEXT -->
-    <section id="next" class="section next container fade-in">
-      <h2>Next steps</h2>
-      <ol class="timeline">
-        <li><strong>Build prototype:</strong> assemble Arduino / microcontroller + sensor + LED and record interactions.</li>
-        <li><strong>Test with caregivers & patients:</strong> collect qualitative feedback and iterate.</li>
-        <li><strong>Document weekly:</strong> publish build updates, photos, and reflections on this site.</li>
-      </ol>
-    </section>
-
-    <!-- CONTACT / FOOTER -->
-    <footer class="footer fade-in">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <p>Built for Delta Residency — Week 1 Deliverable</p>
-          <p>© 2025 <strong>Kejia Liu</strong></p>
-        </div>
-        <div class="footer-right">
-          <p>If you’re working at the intersection of empathy and engineering, I’d love to connect.</p>
-          <p>
-            <a href="https://www.linkedin.com/in/kejia-liu-92559633b" target="_blank" rel="noopener">LinkedIn</a> ·
-            <a href="mailto:liukejia0111@163.com">liukejia0111@163.com</a> ·
-            <a href="https://github.com/kejiali6-web" target="_blank" rel="noopener">GitHub</a>
-          </p>
-        </div>
-      </div>
-    </footer>
-
-  </main>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kejia Liu | Built for Delta Residency Program</p>
+    <p>
+      <a href="https://www.linkedin.com/in/kejia-liu-92559633b" target="_blank">LinkedIn</a> ·
+      <a href="mailto:liukejia0111@163.com">liukejia0111@163.com</a> ·
+      <a href="https://github.com/kejiali6-web" target="_blank">GitHub</a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
