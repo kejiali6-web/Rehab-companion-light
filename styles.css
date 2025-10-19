@@ -59,43 +59,42 @@ body{
 .story-copy h2{margin:0 0 8px 0}
 .quote{background:linear-gradient(90deg, rgba(255,182,160,0.04), rgba(165,200,255,0.02)); padding:14px 16px; border-left:3px solid var(--accent); border-radius:8px; margin:10px 0; color:var(--white); font-style:italic}
 .image-container {
-  position: relative;
   text-align: center;
   margin: 2.5em 0;
 }
 
 .story-image {
-  width: 85%;
-  max-width: 720px;
+  display: block;
+  margin: 0 auto;
+  width: 70%;          /* 控制整体大小：可改成 65% 或 60% */
+  max-width: 600px;    /* 限制最大宽度 */
   height: auto;
-  border-radius: 18px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, filter 0.5s ease;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, filter 0.3s ease;
   object-fit: cover;
-  filter: brightness(0.95) contrast(1.05) saturate(1.1);
-  max-height: 480px;
+  filter: brightness(0.95);
 }
 
-/* 柔光蒙版效果 */
-.image-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  max-width: 720px;
-  height: 100%;
-  border-radius: 18px;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(11,26,42,1) 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* 鼠标悬停时放大并稍微增强亮度 */
 .story-image:hover {
   transform: scale(1.03);
   filter: brightness(1.05);
+}
+
+/* 可选柔光层 */
+.image-container::after {
+  content: "";
+  display: block;
+  width: 70%;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(11,26,42,1) 100%);
+  position: relative;
+  top: -100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* diary */
