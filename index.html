@@ -9,13 +9,49 @@
 
 <body>
   <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Rehab Companion Light</h1>
-      <p class="tagline">Empowering stroke survivors with assistive devices that respond to effort — not just motion.</p>
-      <p class="author">by Kejia Liu</p>
-    </div>
-  </header>
+ <header class="hero">
+  <div class="hero-content">
+    <h1>Rehab Companion Light</h1>
+    <p class="tagline">Empowering stroke survivors with assistive devices that respond to effort — not just motion.</p>
+    <p class="author">by Kejia Liu</p>
+  </div>
+
+  <!-- ✨ Animated glowing hand outline -->
+  <div class="hero-visual">
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="hand-svg">
+      <defs>
+        <linearGradient id="handGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="100%" stop-color="#9fe2ff"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- glowing circle core -->
+      <circle cx="250" cy="250" r="80" fill="none" stroke="url(#handGradient)" stroke-width="2.5" opacity="0.3">
+        <animate attributeName="r" from="75" to="85" dur="2s" repeatCount="indefinite" values="75;85;75"/>
+      </circle>
+
+      <!-- stylized hand outline -->
+      <path
+        d="M200,360 C180,280 220,210 260,200 C280,195 300,210 310,230 C320,250 320,275 330,290 C340,305 360,305 380,290 C395,280 410,260 420,250"
+        fill="none"
+        stroke="url(#handGradient)"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#glow)">
+        <animate attributeName="stroke-dasharray" from="0,1000" to="1000,0" dur="4s" repeatCount="indefinite"/>
+      </path>
+    </svg>
+  </div>
+</header>
 
   <!-- STORY SECTION -->
   <section class="story fade-in">
