@@ -58,6 +58,21 @@ body{
 .story-photo img{width:100%; border-radius:12px; object-fit:cover; max-height:360px; display:block; filter:grayscale(.15) contrast(.95)}
 .story-copy h2{margin:0 0 8px 0}
 .quote{background:linear-gradient(90deg, rgba(255,182,160,0.04), rgba(165,200,255,0.02)); padding:14px 16px; border-left:3px solid var(--accent); border-radius:8px; margin:10px 0; color:var(--white); font-style:italic}
+.image-container {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.story-image {
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.story-image:hover {
+  transform: scale(1.03);
+}
 
 /* diary */
 .diary ul{list-style:none; padding:0; margin:10px 0 0}
