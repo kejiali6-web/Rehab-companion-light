@@ -155,3 +155,34 @@ footer a:hover {
   50% { transform: scale(1.05) translateY(-8px); }
   100% { transform: scale(1) translateY(0); }
 }
+/* Scroll hint arrow */
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 3;
+  animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+.scroll-hint .arrow {
+  font-size: 2rem;
+  color: rgba(255,255,255,0.7);
+  animation: floatArrow 2.2s ease-in-out infinite;
+  transition: color 0.3s ease;
+}
+
+.scroll-hint:hover .arrow {
+  color: #42a5f5;
+}
+
+@keyframes floatArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
