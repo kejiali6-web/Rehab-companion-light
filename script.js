@@ -1,41 +1,39 @@
-// Smooth scroll for anchors
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', (e) => {
+// 🌟 Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) t.scrollIntoView({behavior:'smooth', block:'start'});
-  });
-});
-
-// Fade-in sections on view
-const fadeEls = document.querySelectorAll('.fade-in');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(en => {
-    if (en.isIntersecting) {
-      en.target.style.opacity = 1;
-      en.target.style.transform = 'translateY(0)';
-      io.unobserve(en.target);
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-}, {threshold: 0.12});
-fadeEls.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(16px)';
-  io.observe(el);
 });
 
-// Trigger SVG stroke draw when visible
-const svg = document.querySelector('.hand-svg');
-if (svg) {
-  const sIO = new IntersectionObserver((entries) => {
-    entries.forEach(en => {
-      if (en.isIntersecting) {
-        svg.querySelectorAll('.hand-path, .device-path').forEach(p => {
-          p.style.animationPlayState = 'running';
-        });
-        sIO.disconnect();
-      }
-    });
-  }, {threshold: 0.35});
-  sIO.observe(svg);
+// 🌙 Fade-in animation for sections
+const fadeSections = document.querySelectorAll(".fade-in");
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeSections.forEach(section => {
+  section.style.opacity = 0;
+  section.style.transform = "translateY(25px)";
+  fadeObserver.observe(section);
+});
+
+// 💫 Subtle header glow pulse (optional aesthetic)
+const hero = document.querySelector('.hero');
+if (hero) {
+  setInterval(() => {
+    hero.style.background = `radial-gradient(circle at center, rgba(56,189,248,${0.15 + Math.random() * 0.15}) 0%, transparent 70%)`;
+  }, 2500);
 }
+
+// 🩵 Console signature (for fun)
+console.log("%cBuilt with empathy and engineering by Kejia Liu", "color:#42a5f5;font-weight:bold;");
