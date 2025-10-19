@@ -59,23 +59,43 @@ body{
 .story-copy h2{margin:0 0 8px 0}
 .quote{background:linear-gradient(90deg, rgba(255,182,160,0.04), rgba(165,200,255,0.02)); padding:14px 16px; border-left:3px solid var(--accent); border-radius:8px; margin:10px 0; color:var(--white); font-style:italic}
 .image-container {
+  position: relative;
   text-align: center;
-  margin: 2em 0;
+  margin: 2.5em 0;
 }
 
 .story-image {
-  max-width: 85%;
-  width: 100%;
+  width: 85%;
+  max-width: 720px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, filter 0.5s ease;
   object-fit: cover;
-  max-height: 450px; /* 限制最大高度 */
+  filter: brightness(0.95) contrast(1.05) saturate(1.1);
+  max-height: 480px;
 }
 
+/* 柔光蒙版效果 */
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 720px;
+  height: 100%;
+  border-radius: 18px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(11,26,42,1) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 鼠标悬停时放大并稍微增强亮度 */
 .story-image:hover {
   transform: scale(1.03);
+  filter: brightness(1.05);
 }
 
 /* diary */
