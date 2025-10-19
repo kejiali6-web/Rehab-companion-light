@@ -64,10 +64,14 @@ body{
 }
 
 .story-image {
-  max-width: 80%;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  max-width: 85%;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
+  object-fit: cover;
+  max-height: 450px; /* 限制最大高度 */
 }
 
 .story-image:hover {
