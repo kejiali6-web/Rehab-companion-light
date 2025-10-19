@@ -37,3 +37,10 @@ if (hero) {
 
 // 🩵 Console signature (for fun)
 console.log("%cBuilt with empathy and engineering by Kejia Liu", "color:#42a5f5;font-weight:bold;");
+// Smooth scroll to section
+function scrollToSection(id) {
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
