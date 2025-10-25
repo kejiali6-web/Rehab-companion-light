@@ -1,157 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rehab Companion Light | Kejia Liu</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- HERO SECTION -->
- <header class="hero">
-  <div class="hero-content">
+  <header>
     <h1>Rehab Companion Light</h1>
-    <p class="tagline">Empowering stroke survivors with assistive devices that respond to effort — not just motion.</p>
-    <p class="author">by Kejia Liu</p>
-      <!-- scroll hint arrow -->
-  <div class="scroll-hint" onclick="scrollToSection('story')">
-    <span class="arrow">↓</span>
-  </div>
+    <p class="tagline">“Empowering stroke survivors with assistive devices that respond to effort — not just motion.”</p>
+    <p class="name">by <strong>Kejia Liu</strong></p>
+  </header>
 
-  <!-- ✨ Animated glowing hand outline -->
-  <div class="hero-visual">
-    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="hand-svg">
-      <defs>
-        <linearGradient id="handGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#38bdf8"/>
-          <stop offset="100%" stop-color="#9fe2ff"/>
-        </linearGradient>
-        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="6" result="blur"/>
-          <feMerge>
-            <feMergeNode in="blur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-      </defs>
+  <nav class="timeline">
+    <a href="#week1">Week 1</a> |
+    <a href="#week2">Week 2</a>
+  </nav>
 
-      <!-- glowing circle core -->
-      <circle cx="250" cy="250" r="80" fill="none" stroke="url(#handGradient)" stroke-width="2.5" opacity="0.3">
-        <animate attributeName="r" from="75" to="85" dur="2s" repeatCount="indefinite" values="75;85;75"/>
-      </circle>
+  <!-- WEEK 1 -->
+  <section id="week1" class="section">
+    <h2>Week 1 – Story, Research & Motivation</h2>
 
-      <!-- stylized hand outline -->
-      <path
-        d="M200,360 C180,280 220,210 260,200 C280,195 300,210 310,230 C320,250 320,275 330,290 C340,305 360,305 380,290 C395,280 410,260 420,250"
-        fill="none"
-        stroke="url(#handGradient)"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,1000" to="1000,0" dur="4s" repeatCount="indefinite"/>
-      </path>
-    </svg>
-  </div>
-</header>
-
-  <!-- STORY SECTION -->
-  <section class="story fade-in">
-    <h2>Story / Problem & Motivation</h2>
-    <p>My grandfather — once strong and independent — lost sensation on the right side of his body and his ability to speak after a diabetic stroke. During his recovery, he fought not only to regain control of his body, but to reclaim his dignity.</p>
-
-    <div class="image-container">
-      <img src="images.jpg" class="story-image">
-    </div>
-
-    <blockquote>“More than losing control of my body, I fear losing the dignity and independence that make me human.”</blockquote>
-
-    <p>Through caring for him, I witnessed how rehabilitation challenges go beyond physical limits — they test a person’s patience, pride, and hope.</p>
-  </section>
-
-  <!-- PROBLEM DIARY -->
-  <section class="diary fade-in">
-    <h2>Problem Observation Diary</h2>
-    <ul>
-      <li>Rehabilitation is slow and fragile — small setbacks can cause patients to lose motivation.</li>
-      <li>Caregivers struggle to balance assistance with patient privacy during toileting or dressing.</li>
-      <li>Loss of speech limits communication, leading to emotional isolation and unmet needs.</li>
-      <li>Reduced mobility leads to social withdrawal, which worsens long-term recovery.</li>
-    </ul>
-  </section>
-
-  <!-- RESEARCH SECTION -->
-  <section class="research fade-in">
-    <h2>Research & Inspiration</h2>
-    <p>I have been exploring literature and fieldwork to understand the physiological and emotional dimensions of diabetic stroke recovery. My readings include:</p>
-    <blockquote>
-      Zubkovs, Vitalijs, et al. “Bioengineering a Glucose Oxidase Nanosensor for Near-Infrared Continuous Glucose Monitoring.” <em>Nanoscale Advances</em>, 2022.<br><br>
-      Feldman, Eva L., et al. “Diabetic Neuropathy.” <em>Nature Reviews Disease Primers</em>, vol. 5, no. 1, 41, 2019. <a href="https://doi.org/10.1038/s41572-019-0092-1">DOI link</a>.<br><br>
-      Kim, Sehee, et al. “Dysregulated Hypothalamic–Pituitary–Adrenal Axis Is Associated With Increased Inflammation and Worse Outcomes After Ischemic Stroke in Diabetic Mice.” <em>Frontiers in Immunology</em>, vol. 13, 864858, 2022. <a href="https://doi.org/10.3389/fimmu.2022.864858">DOI link</a>.
-    </blockquote>
-    <p>These studies deepen my understanding of how diabetes alters neural pathways and recovery responses — crucial for designing more adaptive, sensor-integrated rehabilitation tools.</p>
-  </section>
-
-  <!-- FACTORY SECTION -->
-  <section class="factory fade-in">
-    <h2>Visiting Huiyang Medical Equipment Factory</h2>
-    <p>
-      During my field research, I visited <strong>Huiyang Medical Equipment Co., Ltd.</strong>, a rehabilitation device manufacturer producing electric and manual wheelchairs, rollators, and shower chairs.
-      Observing their production lines — from aluminum alloy frames to ergonomic mesh seating — gave me insight into how engineering design translates into human comfort and accessibility.
-    </p>
-    <p>
-      Huiyang’s designs emphasize mechanical safety, stability, and lightweight structure. This inspired me to consider integrating soft robotics and sensor feedback for monitoring patient posture, grip strength, and fatigue in real-time, improving user autonomy and confidence.
-    </p>
-    <p class="source">Source: Huiyang Medical Equipment Co., Ltd., 2025 Product Catalog.</p>
-  </section>
-
-  <!-- EXPLORING SECTION -->
-  <section class="exploring fade-in">
-    <h2>What I’m Exploring</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Core Problem</h3>
-        <p>Current rehabilitation tools often lack human-centered design — focusing on movement, not motivation.</p>
+    <div class="story-container">
+      <div class="story-text">
+        <p>
+          My grandfather suffered a diabetic stroke that left the right side of his body paralyzed.
+          What struck me most wasn’t just the loss of movement — it was the loss of dignity and independence.
+          He, once a proud and self-reliant man, now needed help with even the most private moments.
+        </p>
+        <blockquote>
+          “More than the fear of losing control of my body, I feared losing the dignity of being human.”
+        </blockquote>
+        <p>
+          His struggle inspired me to create tools that help patients recover not just physically, but emotionally —
+          empowering them to regain confidence through small, measurable wins.
+        </p>
       </div>
-      <div class="card">
-        <h3>Technical Frontier</h3>
-        <p>Exploring glucose nanosensors, wearable robotics, and adaptive feedback systems for stroke patients.</p>
-      </div>
-      <div class="card">
-        <h3>Market & Empathy</h3>
-        <p>From factory visits to patient interviews — combining design, empathy, and engineering.</p>
+
+      <div class="story-image">
+        <img src="images.jpg" alt="Grandfather rehabilitation photo">
+        <p class="caption">My grandfather during home rehabilitation</p>
       </div>
     </div>
+
+    <section id="research">
+      <h3>Research & Insights</h3>
+      <p>
+        To understand the problem deeply, I explored both the technical and emotional aspects of rehabilitation.
+        I studied modern sensor technologies and analyzed how existing devices often lack empathy in design.
+      </p>
+
+      <ul>
+        <li><strong>Core Problem:</strong> Current rehab tools lack human-centered design.</li>
+        <li><strong>Technical Frontier:</strong> Studying nanosensors and soft robotics for wearable assistive tech.</li>
+        <li><strong>Market & Empathy:</strong> Factory visits, user observation, and family caregiving experiences.</li>
+      </ul>
+
+      <p>Referenced research:</p>
+      <ul>
+        <li>Zubkovs, V. et al. "Bioengineering a Glucose Oxidase Nanosensor for Near-Infrared Continuous Glucose Monitoring." <em>Nanoscale Advances</em>, 2022.</li>
+        <li>Feldman, E. L. et al. "Diabetic Neuropathy." <em>Nature Reviews Disease Primers</em>, 2019.</li>
+        <li>Kim, S. et al. "Dysregulated Hypothalamic–Pituitary–Adrenal Axis … Ischemic Stroke in Diabetic Mice." <em>Frontiers in Immunology</em>, 2022.</li>
+      </ul>
+    </section>
+
+    <section id="week1-build">
+      <h3>Public Build Log</h3>
+      <p>
+        I built this website to document my journey from empathy to engineering —  
+        sharing every stage publicly to make my learning process transparent and iterative.
+      </p>
+      <p><em>This marks the foundation of my Delta Residency project.</em></p>
+    </section>
   </section>
 
-  <!-- BUILDING SECTION -->
-  <section class="building fade-in">
-    <h2>What I’m Building</h2>
-    <p>My goal is to design assistive medical tools that blend empathy and engineering — empowering patients to regain independence, one small motion at a time.</p>
-    <p>This site is the beginning of my public build log, where I document how compassion becomes engineering — from idea sketches to physical prototypes.</p>
+  <!-- WEEK 2 -->
+  <section id="week2" class="section">
+    <h2>Week 2 – Prototype Development</h2>
+
+    <section id="week2-progress">
+      <h3>Progress Overview</h3>
+      <p>
+        This week, I met with my EGR 102 professor to discuss the technical architecture of
+        <strong>Rehab Companion Light</strong> and refined the prototype concept.
+        With his guidance, I built the first functional diagram using
+        <strong>Arduino Uno</strong> as the main controller.
+      </p>
+
+      <ul>
+        <li><strong>Voice Feedback →</strong> Active buzzer for encouragement & alerts.</li>
+        <li><strong>Light Feedback →</strong> Green LED (on when target pressure met) / Red LED (on when incorrect pressure detected).</li>
+        <li><strong>Sensor Input →</strong> Pressure sensor and potentiometer to detect applied force.</li>
+        <li><strong>Difficulty Adjustment →</strong> Adjustable via sensor thresholds to match recovery stages.</li>
+      </ul>
+
+      <p>
+        I also learned how to use the Arduino serial monitor as a counter to track successful pressure events.  
+        Once a target threshold is met multiple times, the system triggers the buzzer as verbal encouragement.  
+        In the future, the buzzer will be replaced by a recorded voice module for more human-centered interaction.
+      </p>
+    </section>
+
+    <section id="prototype-structure">
+      <h3>Prototype Structure</h3>
+      <div class="prototype-container">
+        <div class="prototype-text">
+          <p>
+            The early-stage prototype is designed around <strong>Arduino Uno</strong> as the main controller.
+            It integrates real-time pressure feedback, LED indicators, and adaptive difficulty settings
+            to motivate patients through progressive rehabilitation stages.
+          </p>
+          <ul>
+            <li><strong>Voice:</strong> Active buzzer to simulate verbal encouragement.</li>
+            <li><strong>Light:</strong> Dual LED feedback for success/failure recognition.</li>
+            <li><strong>Sensor:</strong> Pressure sensor and potentiometer for input sensing.</li>
+            <li><strong>Difficulty:</strong> Dynamic adjustment via code-controlled thresholds.</li>
+          </ul>
+          <p>
+            The schematic was hand-drawn during a mentoring session, where my professor kindly lent me his personal sensor.  
+            This collaboration helped transform the idea into a tangible model ready for digital simulation.
+          </p>
+        </div>
+
+        <div class="prototype-image">
+          <img src="prototype_sketch.jpeg" alt="Handwritten prototype notes and sensor setup">
+          <p class="caption">Professor’s hand-drawn schematic and Arduino sensor module (4:3 layout)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="code-preview">
+      <h3>Arduino Logic Example</h3>
+      <pre><code>
+int pressurePin = A0;
+int greenLED = 8;
+int redLED = 9;
+int buzzer = 10;
+int threshold = 500;
+int count = 0;
+
+void loop() {
+  int pressure = analogRead(pressurePin);
+  if (pressure > threshold) {
+    digitalWrite(greenLED, HIGH);
+    digitalWrite(redLED, LOW);
+    count++;
+    if (count % 5 == 0) tone(buzzer, 1000, 200);
+  } else {
+    digitalWrite(redLED, HIGH);
+    digitalWrite(greenLED, LOW);
+  }
+}
+      </code></pre>
+      <p class="caption">Simulation logic for progressive feedback system — future voice module integration planned.</p>
+    </section>
   </section>
 
-  <!-- NEXT STEP SECTION -->
-  <section class="next-step fade-in">
-    <h2>Next Steps</h2>
-    <ul>
-      <li>Build a prototype using sensor and light feedback.</li>
-      <li>Test with users and gather data.</li>
-      <li>Share weekly progress updates and reflections.</li>
-    </ul>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Kejia Liu | Built for Delta Residency Program</p>
-    <p>
-      <a href="https://www.linkedin.com/in/kejia-liu-92559633b" target="_blank">LinkedIn</a> ·
-      <a href="mailto:liukejia0111@163.com">liukejia0111@163.com</a> ·
-      <a href="https://github.com/kejiali6-web" target="_blank">GitHub</a>
-    </p>
+    <p>🌐 <a href="https://kejiali6-web.github.io/Rehab-companion-light/">Build Log</a> | 
+      <a href="https://www.linkedin.com/in/kejia-liu-92559633b">LinkedIn</a> | 
+      📧 liukejia0111@163.com</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
