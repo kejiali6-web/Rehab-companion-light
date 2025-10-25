@@ -44,3 +44,19 @@ function scrollToSection(id) {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+// 淡入滚动动画
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(section => {
+  section.classList.add("fade-section");
+  observer.observe(section);
+});
