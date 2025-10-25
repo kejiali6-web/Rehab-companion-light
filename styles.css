@@ -168,3 +168,25 @@ footer a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  background-color: rgba(0, 200, 255, 0.2);
+  border: 2px solid #00cfff;
+  color: #E6F4FF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
+}
+
+#backToTop:hover {
+  background-color: rgba(0, 200, 255, 0.4);
+  transform: translateY(-2px);
+}
