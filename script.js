@@ -60,3 +60,21 @@ sections.forEach(section => {
   section.classList.add("fade-section");
   observer.observe(section);
 });
+
+// 返回顶部按钮功能
+const backToTopBtn = document.getElementById("backToTop");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
