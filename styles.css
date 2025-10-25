@@ -13,6 +13,30 @@ header {
   padding: 80px 20px 40px;
 }
 
+header {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px 60px;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0,255,255,0.15), transparent 60%);
+  animation: pulseLight 6s infinite ease-in-out;
+  transform: translateY(-20%);
+}
+
+@keyframes pulseLight {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.2); }
+}
+
 h1 {
   font-size: 2.8rem;
   color: #9FE2FF;
@@ -132,4 +156,15 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
