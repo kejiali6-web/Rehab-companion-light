@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rehab Companion Light | Kejia Liu</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
+  <!-- HERO -->
   <header>
     <h1>Rehab Companion Light</h1>
     <p class="tagline">“Empowering stroke survivors with assistive devices that respond to effort — not just motion.”</p>
     <p class="name">by <strong>Kejia Liu</strong></p>
   </header>
 
+  <!-- TOP NAV / TIMELINE -->
   <nav class="timeline">
     <a href="#week1">Week 1</a> |
     <a href="#week2">Week 2</a>
   </nav>
 
-  <!-- WEEK 1 -->
+  <!-- ========== WEEK 1 ========== -->
   <section id="week1" class="section fade-section">
     <h2>Week 1 – Story, Research & Motivation</h2>
+
+    <!-- Story -->
     <div class="story-container">
       <div class="story-text">
+        <h3>Story & Motivation</h3>
         <p>
-          My grandfather suffered a diabetic stroke that left the right side of his body paralyzed.
+          My grandfather suffered a diabetic stroke that left the right side of his body paralyzed and his speech impaired.
           What struck me most wasn’t just the loss of movement — it was the loss of dignity and independence.
           He, once a proud and self-reliant man, now needed help with even the most private moments.
         </p>
         <blockquote>
-          “More than the fear of losing control of my body, I feared losing the dignity of being human.”
+          “More than the fear of losing control of my body, I feared losing the dignity and independence that make me human.”
         </blockquote>
         <p>
           His struggle inspired me to create tools that help patients recover not just physically, but emotionally —
@@ -39,106 +43,155 @@
       </div>
 
       <div class="story-image">
-        <img src="images.jpg" alt="Grandfather rehabilitation photo">
-        <p class="caption">My grandfather during home rehabilitation</p>
+        <img src="images.jpg" alt="Grandfather during rehabilitation at home"/>
+        <p class="caption">My grandfather during home rehabilitation.</p>
       </div>
     </div>
 
-    <section id="research">
-      <h3>Research & Insights</h3>
-      <p>
-        To understand the problem deeply, I explored both the technical and emotional aspects of rehabilitation.
-        I studied modern sensor technologies and analyzed how existing devices often lack empathy in design.
-      </p>
-
-      <ul>
-        <li><strong>Core Problem:</strong> Current rehab tools lack human-centered design.</li>
-        <li><strong>Technical Frontier:</strong> Studying nanosensors and soft robotics for wearable assistive tech.</li>
-        <li><strong>Market & Empathy:</strong> Factory visits, user observation, and family caregiving experiences.</li>
-      </ul>
-
-      <p>Referenced research:</p>
-      <ul>
-        <li>Zubkovs, V. et al. "Bioengineering a Glucose Oxidase Nanosensor for Near-Infrared Continuous Glucose Monitoring." <em>Nanoscale Advances</em>, 2022.</li>
-        <li>Feldman, E. L. et al. "Diabetic Neuropathy." <em>Nature Reviews Disease Primers</em>, 2019.</li>
-        <li>Kim, S. et al. "Dysregulated Hypothalamic–Pituitary–Adrenal Axis…Ischemic Stroke in Diabetic Mice." <em>Frontiers in Immunology</em>, 2022.</li>
+    <!-- Problem Observation Diary -->
+    <section class="subsection">
+      <h3>Problem Observation Diary</h3>
+      <ul class="bullet">
+        <li><strong>Fragile morale in long rehab:</strong> rehabilitation is long and incremental; even small failures can erase motivation.</li>
+        <li><strong>Privacy vs. caregiving:</strong> it’s hard to balance essential care (toileting, dressing) with preserving dignity.</li>
+        <li><strong>Communication loss:</strong> aphasia makes it difficult to express needs; many internal needs go unheard.</li>
+        <li><strong>Social isolation:</strong> physical limits reduce activity and social life; isolation harms recovery.</li>
       </ul>
     </section>
 
-    <section id="week1-build">
-      <h3>Public Build Log</h3>
+    <!-- Factory Visit (Deliverable 1 detail preserved)-->
+    <section class="subsection">
+      <h3>Factory Visit – Huiyang Medical Equipment</h3>
       <p>
-        I built this website to document my journey from empathy to engineering —  
-        sharing every stage publicly to make my learning process transparent and iterative.
+        I visited a medical device factory to observe how wheelchairs and assistive tools are made. Seeing foam densities,
+        frame bending, caster alignment, and fabric tensioning in person helped me connect comfort, durability, and
+        manufacturability with human-centered needs.
       </p>
-      <p><em>This marks the foundation of my Delta Residency project.</em></p>
+      <div class="cards">
+        <div class="card">
+          <h4>What I Observed</h4>
+          <ul>
+            <li>Seat & backrest: foam hardness and contour directly affect pressure distribution.</li>
+            <li>Frames & joints: repeatability in bends/welds → comfort consistency and safety.</li>
+            <li>Materials: trade-off between breathable fabric vs. easy-to-clean surfaces.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Design Implications</h4>
+          <ul>
+            <li>Every “small” ergonomic detail becomes a daily pain point or relief.</li>
+            <li>Modular parts make iteration feasible for early prototypes.</li>
+            <li>Comfort cues should be measurable (pressure zones / posture angles).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>For RCL</h4>
+          <ul>
+            <li>Target <em>progress feedback</em> during grip/press tasks.</li>
+            <li>Soft, cleanable surfaces where the hand rests.</li>
+            <li>Documentable assembly for caregivers to maintain easily.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & References -->
+    <section id="research" class="subsection">
+      <h3>Research & Insights</h3>
+      <ul class="bullet">
+        <li><strong>Core Problem:</strong> many rehab tools still lack human-centered design.</li>
+        <li><strong>Technical Frontier:</strong> exploring glucose nanosensors & soft robotics for wearable/assistive tech.</li>
+        <li><strong>Market & Empathy:</strong> interviews, factory visit, and real patient stories.</li>
+      </ul>
+
+      <h4>References</h4>
+      <ul class="refs">
+        <li>Zubkovs, V., et al. <em>Nanoscale Advances</em>, 2022 — Near-IR continuous glucose monitoring nanosensor.</li>
+        <li>Feldman, E. L., et al. <em>Nature Reviews Disease Primers</em>, 2019 — Diabetic neuropathy overview.</li>
+        <li>Kim, S., et al. <em>Frontiers in Immunology</em>, 2022 — HPA-axis dysregulation & stroke outcomes in diabetic mice.</li>
+      </ul>
+    </section>
+
+    <!-- Week 1 Next Steps (PRESERVED, with status chips) -->
+    <section class="subsection">
+      <h3>Week 1 – Next Steps (Preserved)</h3>
+      <ul class="todo">
+        <li><span class="chip completed">completed</span> Build a public website to document the journey.</li>
+        <li><span class="chip completed">completed</span> Outline a feedback-based assistive device concept.</li>
+        <li><span class="chip planned">planned</span> Conduct 3–5 short interviews with caregivers/patients.</li>
+        <li><span class="chip planned">planned</span> Define measurable success metrics (e.g., correct-press count).</li>
+      </ul>
+      <p class="note">These goals are kept as historical milestones even when completed, to show intent & trajectory.</p>
     </section>
   </section>
 
-  <!-- WEEK 2 -->
+  <!-- ========== WEEK 2 ========== -->
   <section id="week2" class="section fade-section">
     <h2>Week 2 – Prototype Development</h2>
 
-    <section id="week2-progress">
+    <!-- Progress Overview -->
+    <section id="week2-progress" class="subsection">
       <h3>Progress Overview</h3>
       <p>
-        This week, I met with my EGR 102 professor to discuss the technical architecture of
-        <strong>Rehab Companion Light</strong> and refined the prototype concept.
-        With his guidance, I built the first functional diagram using
-        <strong>Arduino Uno</strong> as the main controller.
+        I met with my EGR 102 professor to refine the prototype architecture for <strong>Rehab Companion Light</strong>.
+        We mapped the first system using <strong>Arduino Uno</strong> as the controller and focused on four feedback aspects.
+        He also lent me a personal sensor to kickstart the hardware exploration.
       </p>
-
-      <ul>
-        <li><strong>Voice Feedback →</strong> Active buzzer for encouragement & alerts.</li>
-        <li><strong>Light Feedback →</strong> Green LED (on when target pressure met) / Red LED (on when incorrect pressure detected).</li>
-        <li><strong>Sensor Input →</strong> Pressure sensor and potentiometer to detect applied force.</li>
-        <li><strong>Difficulty Adjustment →</strong> Adjustable via sensor thresholds to match recovery stages.</li>
+      <ul class="bullet">
+        <li><strong>Voice Feedback →</strong> <em>active buzzer</em> for now (future: voice module).</li>
+        <li><strong>Light Feedback →</strong> green LED (on when target pressure met) / red LED (on until corrected).</li>
+        <li><strong>Sensor Input →</strong> pressure sensor + potentiometer to detect applied force.</li>
+        <li><strong>Difficulty Adjustment →</strong> thresholds tuned to match rehab stages.</li>
       </ul>
-
       <p>
-        I also learned how to use the Arduino serial monitor as a counter to track successful pressure events.
-        Once a target threshold is met multiple times, the system triggers the buzzer as verbal encouragement.
-        In the future, the buzzer will be replaced by a recorded voice module for more human-centered interaction.
+        I also set up a simple <em>serial monitor counter</em> to track successful attempts. After N successes,
+        the system triggers a short buzzer “reward.” (Future: replace buzzer with short human voice prompt.)
       </p>
     </section>
 
-    <section id="prototype-structure">
+    <!-- Prototype Structure (image + text) -->
+    <section id="prototype-structure" class="subsection">
       <h3>Prototype Structure</h3>
       <div class="prototype-container">
         <div class="prototype-text">
           <p>
-            The early-stage prototype is designed around <strong>Arduino Uno</strong> as the main controller.
-            It integrates real-time pressure feedback, LED indicators, and adaptive difficulty settings
-            to motivate patients through progressive rehabilitation stages.
+            Early-stage prototype intent: provide <strong>immediate, understandable feedback</strong> during grip/press tasks.
+            The device motivates progress via lights and simple audio, while difficulty scales with recovery.
           </p>
-          <ul>
-            <li><strong>Voice:</strong> Active buzzer to simulate verbal encouragement.</li>
-            <li><strong>Light:</strong> Dual LED feedback for success/failure recognition.</li>
-            <li><strong>Sensor:</strong> Pressure sensor and potentiometer for input sensing.</li>
-            <li><strong>Difficulty:</strong> Dynamic adjustment via code-controlled thresholds.</li>
+          <ul class="bullet">
+            <li><strong>Controller:</strong> Arduino Uno</li>
+            <li><strong>Inputs:</strong> Pressure sensor (FSR-like) & potentiometer</li>
+            <li><strong>Outputs:</strong> Green/Red LEDs, active buzzer</li>
+            <li><strong>Logic:</strong> Threshold-based success; counter increments; periodic encouragement</li>
           </ul>
           <p>
-            The schematic was hand-drawn during a mentoring session, where my professor kindly lent me his personal sensor.
-            This collaboration helped transform the idea into a tangible model ready for digital simulation.
+            This hand-drawn schematic was created in a mentoring session. It translates empathy-driven design into a
+            buildable circuit that can be simulated before physical prototyping.
           </p>
         </div>
-
         <div class="prototype-image">
-          <img src="prototype_sketch.jpeg" alt="Handwritten prototype notes and sensor setup">
-          <p class="caption">Professor’s hand-drawn schematic and Arduino sensor module (4:3 layout)</p>
+          <img src="prototype_sketch.jpeg" alt="Handwritten prototype notes and sensor setup"/>
+          <p class="caption">Professor’s hand-drawn schematic & sensor module (4:3).</p>
         </div>
       </div>
     </section>
 
-    <section id="code-preview">
+    <!-- Code Preview -->
+    <section id="code-preview" class="subsection">
       <h3>Arduino Logic Example</h3>
-      <pre><code>
-int pressurePin = A0;
+      <pre><code>int pressurePin = A0;
 int greenLED = 8;
 int redLED = 9;
 int buzzer = 10;
 int threshold = 500;
 int count = 0;
+
+void setup() {
+  pinMode(greenLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600);
+}
 
 void loop() {
   int pressure = analogRead(pressurePin);
@@ -146,25 +199,43 @@ void loop() {
     digitalWrite(greenLED, HIGH);
     digitalWrite(redLED, LOW);
     count++;
-    if (count % 5 == 0) tone(buzzer, 1000, 200);
+    Serial.println(count);
+    if (count % 5 == 0) tone(buzzer, 1000, 200); // reward on every 5 successes
   } else {
     digitalWrite(redLED, HIGH);
     digitalWrite(greenLED, LOW);
   }
-}
-      </code></pre>
-      <p class="caption">Simulation logic for progressive feedback system — future voice module integration planned.</p>
+  delay(50);
+}</code></pre>
+      <p class="caption">Prototype logic for progressive encouragement; voice module planned as next step.</p>
+    </section>
+
+    <!-- Week 2 Next Steps (NEW, preserved for history) -->
+    <section class="subsection">
+      <h3>Week 2 – Next Steps</h3>
+      <ul class="todo">
+        <li><span class="chip planned">planned</span> Build a Tinkercad simulation (UNO + FSR + LEDs + buzzer + pot).</li>
+        <li><span class="chip planned">planned</span> Breadboard a minimal circuit and record a 15–30s demo clip.</li>
+        <li><span class="chip planned">planned</span> Replace buzzer with a short voice module (pre-recorded prompts).</li>
+        <li><span class="chip planned">planned</span> Add data logging (success counts) for daily trend visualization.</li>
+        <li><span class="chip planned">planned</span> Short interviews with caregivers to refine feedback tones & timing.</li>
+      </ul>
+      <p class="note">Next steps are listed for accountability and will remain visible even after completion.</p>
     </section>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>🌐 <a href="https://kejiali6-web.github.io/Rehab-companion-light/">Build Log</a> |
-    <a href="https://www.linkedin.com/in/kejia-liu-92559633b">LinkedIn</a> |
-    📧 liukejia0111@163.com</p>
+    <p>
+      🌐 <a href="https://kejiali6-web.github.io/Rehab-companion-light/">Build Log</a> |
+      <a href="https://www.linkedin.com/in/kejia-liu-92559633b">LinkedIn</a> |
+      📧 liukejia0111@163.com
+    </p>
   </footer>
 
+  <!-- Back To Top -->
   <button id="backToTop" title="Go to top">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>
-
