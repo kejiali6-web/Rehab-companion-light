@@ -1,27 +1,17 @@
-// 🔹 Fade-in animation
-const sections = document.querySelectorAll("section");
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
+// Fade-in animation for each section
+const sections = document.querySelectorAll(".section");
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add("visible"); }
   });
-}, { threshold: 0.2 });
-sections.forEach(section => {
-  section.classList.add("fade-section");
-  observer.observe(section);
-});
+},{ threshold: 0.2 });
+sections.forEach(sec=>observer.observe(sec));
 
-// 🔹 Back to Top button logic
+// Back-to-top button
 const backToTopBtn = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
+window.addEventListener("scroll", ()=>{
+  backToTopBtn.style.display = (window.scrollY > 300) ? "block" : "none";
 });
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+backToTopBtn.addEventListener("click", ()=>{
+  window.scrollTo({ top:0, behavior:"smooth" });
 });
-
