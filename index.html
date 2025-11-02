@@ -19,40 +19,164 @@
     <a href="#week3">Week 3</a>
   </nav>
 
-  <!-- Week 1 & Week 2 sections (保持原样) -->
-  <!-- ...你的完整 Week 1 和 Week 2 内容放在这里，不变... -->
+  <!-- WEEK 1 -->
+  <section id="week1" class="section fade-section">
+    <h2>Week 1 – Story, Research & Motivation</h2>
+    <div class="story-container">
+      <div class="story-text">
+        <p>
+          My grandfather suffered a diabetic stroke that left the right side of his body paralyzed.
+          What struck me most wasn’t just the loss of movement — it was the loss of dignity and independence.
+          He, once a proud and self-reliant man, now needed help with even the most private moments.
+        </p>
+        <blockquote>
+          “More than the fear of losing control of my body, I feared losing the dignity of being human.”
+        </blockquote>
+        <p>
+          His struggle inspired me to create tools that help patients recover not just physically, but emotionally —
+          empowering them to regain confidence through small, measurable wins.
+        </p>
+      </div>
 
-  <!-- Week 3 -->
+      <div class="story-image">
+        <img src="images.jpg" alt="Grandfather rehabilitation photo">
+        <p class="caption">My grandfather during home rehabilitation</p>
+      </div>
+    </div>
+
+    <h3>Problem Observation Diary</h3>
+    <ul>
+      <li>Rehabilitation is long and incremental; small failures can erase motivation.</li>
+      <li>Caregivers struggle to balance physical help and respect for privacy.</li>
+      <li>Patients with speech loss can’t communicate their needs effectively.</li>
+      <li>Limited mobility leads to social isolation and emotional withdrawal.</li>
+    </ul>
+
+    <h3>Factory Visit – Huiyang Medical Equipment</h3>
+    <p>
+      I visited a medical device factory to observe how wheelchairs and assistive tools are made. Seeing foam densities,
+      frame bending, and caster alignment helped me connect design precision with user comfort and dignity.
+    </p>
+    <ul>
+      <li>Seat & backrest: foam hardness affects pressure comfort.</li>
+      <li>Material trade-offs between cleanability and breathability.</li>
+      <li>Designing modular components allows easier upgrades for users.</li>
+    </ul>
+
+    <h3>Research & References</h3>
+    <ul>
+      <li>Zubkovs, V., et al. "Bioengineering a Glucose Oxidase Nanosensor for Near-Infrared Continuous Glucose Monitoring." <em>Nanoscale Advances</em>, 2022.</li>
+      <li>Feldman, E. L., et al. "Diabetic Neuropathy." <em>Nature Reviews Disease Primers</em>, 2019.</li>
+      <li>Kim, S., et al. "Dysregulated Hypothalamic–Pituitary–Adrenal Axis..." <em>Frontiers in Immunology</em>, 2022.</li>
+    </ul>
+
+    <h3>Next Steps (Week 1)</h3>
+    <ul>
+      <li>✅ Build a public website for documentation.</li>
+      <li>✅ Outline assistive device concept with feedback design.</li>
+      <li>⏳ Conduct interviews with caregivers/patients.</li>
+      <li>⏳ Define success metrics (e.g., pressure repetition count).</li>
+    </ul>
+  </section>
+
+  <!-- WEEK 2 -->
+  <section id="week2" class="section fade-section">
+    <h2>Week 2 – Prototype Development</h2>
+    <p>
+      This week, I met with my EGR 102 professor to refine the prototype’s structure.
+      Together, we mapped out a system using <strong>Arduino Uno</strong> as the controller,
+      focusing on feedback through light, sound, and pressure sensors.
+    </p>
+
+    <ul>
+      <li>Voice Feedback → Active buzzer for encouragement & alerts.</li>
+      <li>Light Feedback → Green LED (target met) / Red LED (needs correction).</li>
+      <li>Sensor Input → Pressure sensor + potentiometer.</li>
+      <li>Difficulty Adjustment → Threshold-based scaling for recovery stages.</li>
+    </ul>
+
+    <div class="prototype-container">
+      <div class="prototype-text">
+        <p>
+          The prototype promotes effort recognition — not just movement detection. 
+          It rewards correct pressure with light and tone, helping stroke patients feel progress in real time.
+        </p>
+        <ul>
+          <li>Controller: Arduino Uno</li>
+          <li>Inputs: Pressure Sensor & Potentiometer</li>
+          <li>Outputs: Green/Red LEDs, Buzzer</li>
+        </ul>
+      </div>
+      <div class="prototype-image">
+        <img src="prototype_sketch.jpeg" alt="Prototype sketch">
+        <p class="caption">Professor’s hand-drawn schematic and Arduino module</p>
+      </div>
+    </div>
+
+    <h3>Arduino Logic Example</h3>
+    <pre><code>
+int pressurePin = A0;
+int greenLED = 8;
+int redLED = 9;
+int buzzer = 10;
+int threshold = 500;
+int count = 0;
+
+void setup() {
+  pinMode(greenLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int pressure = analogRead(pressurePin);
+  if (pressure > threshold) {
+    digitalWrite(greenLED, HIGH);
+    digitalWrite(redLED, LOW);
+    count++;
+    if (count % 5 == 0) tone(buzzer, 1000, 200);
+  } else {
+    digitalWrite(redLED, HIGH);
+    digitalWrite(greenLED, LOW);
+  }
+}
+    </code></pre>
+
+    <h3>Next Steps (Week 2)</h3>
+    <ul>
+      <li>⏳ Build a small Tinkercad simulation.</li>
+      <li>⏳ Test the breadboard version with real sensors.</li>
+      <li>⏳ Replace buzzer with pre-recorded voice feedback.</li>
+      <li>⏳ Add counter display and data tracking.</li>
+    </ul>
+  </section>
+
+  <!-- WEEK 3 -->
   <section id="week3" class="section fade-section">
     <h2 class="highlight">Week 3 – Validation & Feedback</h2>
     <p>
       This week marks the public launch of <strong>Rehab Companion Light</strong> as part of the final Delta Residency deliverable.
-      I focused on validating the concept through open sharing and inviting early interest from peers, mentors, and anyone passionate about
-      human-centered rehabilitation technology.
+      I focused on validating the idea through open sharing and inviting early interest from peers, mentors, and anyone passionate
+      about human-centered rehabilitation technology.
     </p>
-
     <p>
-      I published a <a href="https://www.linkedin.com/in/kejia-liu-92559633b" target="_blank">LinkedIn post</a> introducing the project,
+      I published a <a href="https://www.linkedin.com/in/kejia-liu-92559633b" target="_blank">LinkedIn post</a>,
       shared the <a href="https://kejiali6-web.github.io/Rehab-companion-light/" target="_blank">build log website</a>,
       and created a short survey form to gather potential testers and feedback.
     </p>
-
     <p>
-      Even without many responses yet, launching publicly helped me practice communicating both the technical and emotional essence of my work —
-      translating compassion into engineering. I now have a clearer direction for what comes next.
+      Even without many responses yet, this launch helped me learn to communicate both the technical and emotional sides of my work.
+      It reaffirmed my goal: turning empathy into engineering.
     </p>
-
-    <h3>Next Steps</h3>
+    <h3>Next Steps (Week 3)</h3>
     <ul>
-      <li>Run a small Tinkercad simulation using LEDs, buzzer, and pressure sensor to visualize response timing.</li>
-      <li>Integrate a simple voice module to provide emotional, human-like encouragement feedback.</li>
-      <li>Interview 2–3 rehabilitation practitioners to evaluate practicality and comfort factors.</li>
-      <li>Design the prototype casing with better ergonomics, portability, and hygiene considerations.</li>
+      <li>Run a small Tinkercad simulation with LEDs and sensors.</li>
+      <li>Integrate a basic voice module for emotional feedback.</li>
+      <li>Interview rehabilitation practitioners for design validation.</li>
+      <li>Improve ergonomics and hygiene design for the physical prototype.</li>
     </ul>
-
-    <p class="caption">
-      🌟 Week 3 is less about perfection and more about connection — building something real, visible, and human.
-    </p>
+    <p class="caption">🌟 Week 3 is less about perfection, and more about connection — bringing empathy to engineering.</p>
   </section>
 
   <footer>
