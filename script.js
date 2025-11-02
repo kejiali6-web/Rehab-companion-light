@@ -1,4 +1,4 @@
-// Fade-in sections
+// Fade-in animation for each section
 const sections = document.querySelectorAll(".section");
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
@@ -7,7 +7,7 @@ const observer = new IntersectionObserver((entries)=>{
 },{ threshold: 0.2 });
 sections.forEach(sec=>observer.observe(sec));
 
-// Back to top
+// Back-to-top button
 const backToTopBtn = document.getElementById("backToTop");
 window.addEventListener("scroll",()=>{
   backToTopBtn.style.display = (window.scrollY > 300) ? "block" : "none";
