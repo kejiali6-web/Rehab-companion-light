@@ -32,13 +32,13 @@
         <p>
           Rehab Companion Light began with a personal story: watching my grandfather
           struggle through repetitive stroke rehabilitation sessions. Many exercises
-          involve simple grip motions with little feedback or emotional support.
+          involved simple grip motions with little feedback or emotional support.
         </p>
 
         <p>
           This project uses an FSR-402 pressure sensor, LEDs, audio feedback,
-          a potentiometer for difficulty control, and 3D-printed components.
-          Below is the full build log documenting each week of progress.
+          adjustable thresholds, and 3D-printed components. 
+          Below is the full week-by-week engineering build log.
         </p>
 
         <div class="media-row">
@@ -49,7 +49,7 @@
 
           <figure class="media-card">
             <img src="prototype_sketch.jpeg" alt="Concept sketch" />
-            <figcaption>Early concept sketch based on professor guidance.</figcaption>
+            <figcaption>Early concept sketch derived from professor guidance.</figcaption>
           </figure>
         </div>
       </div>
@@ -64,9 +64,9 @@
         <article class="week-block">
           <h3>Week 1 – Story, Problem, and Research</h3>
           <ul>
-            <li>Documented real rehab observations.</li>
-            <li>Created initial problem statement and constraints.</li>
-            <li>Reviewed relevant FSR-based sensing research.</li>
+            <li>Documented real rehabilitation observations.</li>
+            <li>Created the initial problem statement and design constraints.</li>
+            <li>Researched FSR-based sensing and stroke recovery methods.</li>
           </ul>
         </article>
 
@@ -74,9 +74,9 @@
         <article class="week-block">
           <h3>Week 2 – Early Guidance & Architecture</h3>
           <ul>
-            <li>Discussed feasibility with faculty.</li>
-            <li>Outlined first system architecture.</li>
-            <li>Drafted BOM and module diagram.</li>
+            <li>Reviewed feasibility and design scope with engineering faculty.</li>
+            <li>Outlined the first system architecture diagram.</li>
+            <li>Drafted BOM and modular design plan.</li>
           </ul>
         </article>
 
@@ -86,9 +86,9 @@
           <div class="two-column">
             <div>
               <ul>
-                <li>Built the breadboard prototype with FSR-402.</li>
-                <li>Wrote the first fixed-threshold Arduino code.</li>
-                <li>Validated real-time sensing feedback.</li>
+                <li>Assembled breadboard prototype with FSR-402.</li>
+                <li>Developed fixed-threshold LED & buzzer feedback code.</li>
+                <li>Validated consistent real-time pressure readings.</li>
               </ul>
             </div>
 
@@ -105,9 +105,9 @@
         <article class="week-block">
           <h3>Week 4 – Lab Collaboration</h3>
           <ul>
-            <li>Met with Dr. Gulick to review the concept.</li>
-            <li>Received validation on feasibility and meaningful impact.</li>
-            <li>Defined clear engineering goals.</li>
+            <li>Met with Dr. Gulick for technical and feasibility review.</li>
+            <li>Received confirmation of project value & engineering direction.</li>
+            <li>Defined concrete design milestones for the next phase.</li>
           </ul>
         </article>
 
@@ -118,17 +118,16 @@
           <div class="two-column">
             <div>
               <ul>
-                <li>Formed a multidisciplinary team.</li>
-                <li>Added adaptive threshold logic to Arduino code.</li>
-                <li>Threshold now increases after successful squeezes.</li>
+                <li>Formed a multidisciplinary team (BioE + EE).</li>
+                <li>Designed adaptive threshold logic for progressive difficulty.</li>
+                <li>Prepared integration plan for voice module.</li>
               </ul>
             </div>
 
             <div>
               <figure class="media-card">
-                <!-- 你的视频上传后，把 team_audio_test.mp4 改成正确文件名 -->
-                <video controls src="team_audio_test.mp4"></video>
-                <figcaption>Team testing: integrating audio module with FSR feedback.</figcaption>
+                <video controls src="team_audio_test.mov"></video>
+                <figcaption>Team integration test with audio module.</figcaption>
               </figure>
             </div>
           </div>
@@ -139,15 +138,15 @@
         <article class="week-block">
           <h3>Week 6 – Potentiometer & CAD Development</h3>
           <ul>
-            <li>Added a potentiometer for adjustable difficulty.</li>
-            <li>Started modeling lower half of grip ring.</li>
-            <li>Considered ergonomics and sensor protection.</li>
+            <li>Added a potentiometer for user-adjustable difficulty.</li>
+            <li>Began Fusion 360 modeling of the grip ring (lower half).</li>
+            <li>Focused on ergonomics & FSR protection geometry.</li>
           </ul>
 
           <div class="media-row">
             <figure class="media-card">
               <img src="fusion_ring_final.png" alt="Final grip ring CAD" />
-              <figcaption>Final lower-half grip ring model in Fusion 360.</figcaption>
+              <figcaption>Lower-half grip ring model in Fusion 360.</figcaption>
             </figure>
           </div>
         </article>
@@ -156,9 +155,9 @@
         <article class="week-block">
           <h3>Week 7 – Audio Feedback & Printing Prep</h3>
           <ul>
-            <li>Integrated voice-recording audio module.</li>
-            <li>Prepared CAD for the main housing box.</li>
-            <li>Selected 3D print materials and parameters.</li>
+            <li>Integrated voice-recording module.</li>
+            <li>Completed CAD preparation for main housing box.</li>
+            <li>Determined initial print parameters & materials.</li>
           </ul>
         </article>
 
@@ -169,16 +168,16 @@
           <div class="two-column">
             <div>
               <ul>
-                <li>Printed first version in PLA.</li>
-                <li>Identified that PLA is too rigid for rehab use.</li>
-                <li>Will re-print in TPU for flexibility.</li>
+                <li>Printed first prototype using PLA.</li>
+                <li>Identified PLA rigidity issues for hand-grip comfort.</li>
+                <li>Decided to reprint with TPU for flexibility.</li>
               </ul>
             </div>
 
             <div>
               <figure class="media-card">
                 <img src="print_fail_pla.jpg" alt="Failed PLA print" />
-                <figcaption>First PLA print: rigid, uncomfortable → switching to TPU.</figcaption>
+                <figcaption>PLA print: rigid & unsuitable → switching to TPU.</figcaption>
               </figure>
             </div>
           </div>
@@ -193,6 +192,7 @@
         <h2>Photo & Video Gallery</h2>
 
         <div class="gallery-grid">
+
           <figure class="media-card">
             <img src="grandpa_rehab.jpg" alt="Rehab origin" />
             <figcaption>Grandfather rehab reference.</figcaption>
@@ -200,7 +200,7 @@
 
           <figure class="media-card">
             <img src="prototype_sketch.jpeg" alt="Sketch" />
-            <figcaption>Hand-drawn concept sketch.</figcaption>
+            <figcaption>Original hand-drawn concept sketch.</figcaption>
           </figure>
 
           <figure class="media-card">
@@ -215,13 +215,14 @@
 
           <figure class="media-card">
             <img src="print_fail_pla.jpg" alt="PLA fail" />
-            <figcaption>PLA print failure → revision planned.</figcaption>
+            <figcaption>PLA print failure → next iteration.</figcaption>
           </figure>
 
           <figure class="media-card">
-            <video controls src="team_audio_test.mp4"></video>
+            <video controls src="team_audio_test.mov"></video>
             <figcaption>Team audio integration test.</figcaption>
           </figure>
+
         </div>
       </div>
     </section>
@@ -231,11 +232,11 @@
       <div class="section-inner">
         <h2>Next Steps</h2>
         <ul>
-          <li>Re-print grip ring using TPU.</li>
-          <li>Refine ergonomics across hand sizes.</li>
-          <li>Improve audio encouragement logic.</li>
-          <li>Stress-test sensor consistency.</li>
-          <li>Prepare for early user feedback and pilot testing.</li>
+          <li>Re-print grip ring with TPU.</li>
+          <li>Improve ergonomic contouring for different hand sizes.</li>
+          <li>Refine audio encouragement patterns.</li>
+          <li>Conduct repeated-use sensor stability tests.</li>
+          <li>Prepare early-stage user feedback sessions.</li>
         </ul>
       </div>
     </section>
