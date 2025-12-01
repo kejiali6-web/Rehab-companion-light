@@ -3,20 +3,23 @@
 // ===========================
 const sections = document.querySelectorAll(".section");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.15,
-  }
-);
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-sections.forEach((sec) => observer.observe(sec));
+  sections.forEach((sec) => observer.observe(sec));
+} else {
+  // 兼容极老旧浏览器：直接全部设为可见
+  sections.forEach((sec) => sec.classList.add("visible"));
+}
 
 // ===========================
 // Back-to-top button
@@ -30,10 +33,7 @@ window.addEventListener("scroll", () => {
 
 if (backToTopBtn) {
   backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
@@ -41,7 +41,7 @@ if (backToTopBtn) {
 // ScrollSpy — highlight current nav link
 // =====================================
 const navLinks = document.querySelectorAll(".top-nav a");
-const pageSections = [...sections];
+const pageSections = Array.from(sections);
 
 function activateCurrentSection() {
   let currentId = "";
@@ -82,8 +82,6 @@ navLinks.forEach((link) => {
 // =====================================
 // Lightbox for images
 // =====================================
-
-// 创建 lightbox 容器
 const lightbox = document.createElement("div");
 lightbox.id = "lightbox";
 lightbox.innerHTML = `
@@ -96,8 +94,6 @@ document.body.appendChild(lightbox);
 
 const lightboxImg = lightbox.querySelector("img");
 const lightboxClose = lightbox.querySelector(".lightbox-close");
-
-// 给所有 media-card 里的图片加点击放大
 const clickableImages = document.querySelectorAll(".media-card img");
 
 clickableImages.forEach((img) => {
@@ -108,14 +104,12 @@ clickableImages.forEach((img) => {
   });
 });
 
-// 关闭 lightbox：点击遮罩或 X
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox || e.target === lightboxClose) {
     lightbox.classList.remove("open");
   }
 });
 
-// 按 Esc 关闭
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     lightbox.classList.remove("open");
