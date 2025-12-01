@@ -105,7 +105,7 @@ clickableImages.forEach((img) => {
   img.addEventListener("click", () => {
     lightboxImg.src = img.src;
     lightbox.classList.add("open");
-  });
+  }); 
 });
 
 // 关闭 lightbox：点击遮罩或 X
