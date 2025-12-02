@@ -17,7 +17,7 @@ if ("IntersectionObserver" in window) {
 
   sections.forEach((sec) => observer.observe(sec));
 } else {
-  // 兼容极老旧浏览器：直接全部设为可见
+  // 兼容老浏览器：直接全部设为可见
   sections.forEach((sec) => sec.classList.add("visible"));
 }
 
