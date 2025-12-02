@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rehab Companion Light | Build Log</title>
+  <title>Rehab Companion Light | Week-by-week log</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body id="top">
 
   <!-- 顶部导航 -->
   <header class="site-header">
@@ -17,238 +17,189 @@
       </div>
       <nav class="top-nav">
         <a href="#intro">Intro</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#next-steps">Next Steps</a>
+        <a href="#week1">Week 1</a>
+        <a href="#week2">Week 2</a>
+        <a href="#week3">Week 3</a>
+        <a href="#week4">Week 4</a>
+        <a href="#week5">Week 5</a>
+        <a href="#week6">Week 6</a>
+        <a href="#week7">Week 7</a>
+        <a href="#week8">Week 8</a>
+        <a href="#next">Next</a>
       </nav>
     </div>
   </header>
 
   <main>
     <!-- Intro -->
-    <section id="intro" class="section intro-section">
-      <div class="section-inner">
+    <section id="intro" class="block">
+      <div class="inner">
         <h2>Project Overview</h2>
         <p>
-          Rehab Companion Light began with a personal story: watching my grandfather
-          struggle through repetitive stroke rehabilitation sessions. Many exercises
-          involved simple grip motions with little feedback or emotional support.
-        </p>
-
-        <p>
-          This project uses an FSR-402 pressure sensor, LEDs, audio feedback,
-          adjustable thresholds, and 3D-printed components.
-          Below is the full week-by-week engineering build log (Weeks 1–8).
+          Rehab Companion Light started from my grandfather’s rehabilitation experience.
+          Many of his hand-grip exercises were repetitive and lonely, with very little
+          feedback or encouragement. I wanted to build a small device that can sense grip
+          strength and respond with light and personalized audio feedback.
         </p>
 
         <div class="media-row">
-          <figure class="media-card">
-            <img src="grandpa_rehab.jpg" alt="Grandfather rehab reference" />
-            <figcaption>Origin: my grandfather’s rehabilitation experience.</figcaption>
+          <figure class="media">
+            <img src="grandpa_rehab.jpg" alt="Grandfather rehabilitation reference" />
+            <figcaption>Origin: my grandfather’s rehabilitation sessions.</figcaption>
           </figure>
 
-          <figure class="media-card">
-            <img src="prototype_sketch.jpeg" alt="Concept sketch" />
-            <figcaption>Early concept sketch derived from professor guidance.</figcaption>
+          <figure class="media">
+            <img src="prototype_sketch.jpeg" alt="Early concept sketch" />
+            <figcaption>Early concept sketch based on professor’s guidance.</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- Timeline -->
-    <section id="timeline" class="section timeline-section">
-      <div class="section-inner">
-        <h2>Build Timeline (Weeks 1–8)</h2>
-
-        <!-- Week 1 -->
-        <article class="week-block">
-          <h3>Week 1 – Story, Problem, and Research</h3>
-          <ul>
-            <li>Documented real rehabilitation observations from my grandfather’s rehab experience.</li>
-            <li>Created the initial problem statement and design constraints.</li>
-            <li>Researched FSR-based sensing and stroke recovery methods.</li>
-          </ul>
-        </article>
-
-        <!-- Week 2 -->
-        <article class="week-block">
-          <h3>Week 2 – Early Guidance & Architecture</h3>
-          <ul>
-            <li>Reviewed feasibility and design scope with engineering faculty.</li>
-            <li>Outlined the first system architecture diagram.</li>
-            <li>Drafted a modular design plan and preliminary BOM.</li>
-          </ul>
-        </article>
-
-        <!-- Week 3 -->
-        <article class="week-block">
-          <h3>Week 3 – First Working Circuit</h3>
-          <div class="two-column">
-            <div>
-              <ul>
-                <li>Assembled a breadboard prototype with an FSR-402, LEDs, and a buzzer.</li>
-                <li>Developed fixed-threshold Arduino code for basic feedback.</li>
-                <li>Validated consistent real-time pressure readings.</li>
-              </ul>
-            </div>
-
-            <div>
-              <figure class="media-card">
-                <img src="fsr_breadboard.jpg" alt="FSR breadboard prototype" />
-                <figcaption>FSR-402 + LED + buzzer first working prototype.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- Week 4 -->
-        <article class="week-block">
-          <h3>Week 4 – Lab Collaboration</h3>
-          <ul>
-            <li>Met with Dr. Gulick for technical and feasibility review.</li>
-            <li>Confirmed project value, feasibility, and potential impact.</li>
-            <li>Defined concrete design milestones for the next phase.</li>
-          </ul>
-        </article>
-
-        <!-- Week 5 -->
-        <article class="week-block">
-          <h3>Week 5 – Team Formation & Adaptive Logic</h3>
-          <div class="two-column">
-            <div>
-              <ul>
-                <li>Formed a multidisciplinary team (BioE + EE).</li>
-                <li>Designed adaptive threshold logic for progressive difficulty.</li>
-                <li>Planned integration of a voice-recording module.</li>
-              </ul>
-            </div>
-
-            <div>
-              <figure class="media-card">
-                <video controls src="team_audio_test.mov"></video>
-                <figcaption>Team integration test with the audio module.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- Week 6 -->
-        <article class="week-block">
-          <h3>Week 6 – Potentiometer & CAD Development</h3>
-          <ul>
-            <li>Added a potentiometer for user-adjustable difficulty.</li>
-            <li>Began Fusion 360 modeling of the lower-half grip ring.</li>
-            <li>Focused on ergonomics and FSR protection geometry.</li>
-          </ul>
-
-          <div class="media-row">
-            <figure class="media-card">
-              <img src="fusion_ring_final.png" alt="Final grip ring CAD" />
-              <figcaption>Lower-half grip ring model in Fusion 360.</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <!-- Week 7 -->
-        <article class="week-block">
-          <h3>Week 7 – Audio Feedback & Printing Prep</h3>
-          <ul>
-            <li>Integrated a voice-recording module to replace the simple buzzer tone.</li>
-            <li>Completed CAD preparation for the main electronics housing.</li>
-            <li>Determined initial print parameters and material options.</li>
-          </ul>
-        </article>
-
-        <!-- Week 8 -->
-        <article class="week-block">
-          <h3>Week 8 – First 3D Print & Failure Analysis</h3>
-          <div class="two-column">
-            <div>
-              <ul>
-                <li>Printed the first prototype using PLA.</li>
-                <li>Identified PLA rigidity issues for hand-grip comfort.</li>
-                <li>Decided to reprint with TPU for better flexibility.</li>
-              </ul>
-            </div>
-
-            <div>
-              <figure class="media-card">
-                <img src="print_fail_pla.jpg" alt="Failed PLA print" />
-                <figcaption>PLA print: mechanically okay but too rigid → switching to TPU.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </article>
-
+    <!-- Week 1 -->
+    <section id="week1" class="block">
+      <div class="inner">
+        <h2>Week 1 – Story, problem, and background research</h2>
+        <ul>
+          <li>Recorded observations from my grandfather’s stroke rehabilitation and daily grip exercises.</li>
+          <li>Wrote the first version of the problem statement and basic constraints (low cost, portable, simple interface).</li>
+          <li>Reviewed papers and online resources on FSR-based grip sensing and stroke recovery training.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="section gallery-section">
-      <div class="section-inner">
-        <h2>Photo & Video Gallery</h2>
+    <!-- Week 2 -->
+    <section id="week2" class="block">
+      <div class="inner">
+        <h2>Week 2 – Talking to mentors & defining the first architecture</h2>
+        <ul>
+          <li>Discussed the idea with engineering faculty and received feedback on feasibility and scope.</li>
+          <li>Sketched a simple system architecture: FSR → Arduino → LED / buzzer feedback.</li>
+          <li>Created an initial list of required parts and drafted a modular design plan.</li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="gallery-grid">
-          <figure class="media-card">
-            <img src="grandpa_rehab.jpg" alt="Rehab origin" />
-            <figcaption>Grandfather rehab reference.</figcaption>
-          </figure>
+    <!-- Week 3 -->
+    <section id="week3" class="block">
+      <div class="inner">
+        <h2>Week 3 – First working breadboard circuit</h2>
+        <ul>
+          <li>Built a breadboard circuit using an FSR-402, resistors, LEDs, and a buzzer.</li>
+          <li>Wrote basic Arduino code with a fixed pressure threshold to turn on LEDs and trigger the buzzer.</li>
+          <li>Tested different grip strengths and confirmed that the sensor readings changed reliably.</li>
+        </ul>
 
-          <figure class="media-card">
-            <img src="prototype_sketch.jpeg" alt="Sketch" />
-            <figcaption>Original hand-drawn concept sketch.</figcaption>
-          </figure>
+        <figure class="media">
+          <img src="fsr_breadboard.jpg" alt="FSR breadboard prototype" />
+          <figcaption>FSR-402 + LEDs + buzzer: first working breadboard prototype.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-          <figure class="media-card">
-            <img src="fsr_breadboard.jpg" alt="Breadboard prototype" />
-            <figcaption>FSR breadboard sensing prototype.</figcaption>
-          </figure>
+    <!-- Week 4 -->
+    <section id="week4" class="block">
+      <div class="inner">
+        <h2>Week 4 – Connecting with the lab</h2>
+        <ul>
+          <li>Met with Dr. Gulick to review the technical approach and clarify clinical relevance.</li>
+          <li>Discussed potential risks (sensor durability, calibration, comfort) and got suggestions for next steps.</li>
+          <li>Defined short-term milestones: stable sensing, encouragement mechanism, and a safe grip structure.</li>
+        </ul>
+      </div>
+    </section>
 
-          <figure class="media-card">
-            <img src="fusion_ring_final.png" alt="CAD grip ring" />
-            <figcaption>Lower-half grip ring CAD model.</figcaption>
-          </figure>
+    <!-- Week 5 -->
+    <section id="week5" class="block">
+      <div class="inner">
+        <h2>Week 5 – Team formation and adaptive feedback logic</h2>
+        <ul>
+          <li>Formed a small cross-disciplinary team (Bioengineering + Electrical Engineering) to develop the prototype together.</li>
+          <li>Designed the logic for an adaptive threshold that can increase after successful repetitions.</li>
+          <li>Planned how to integrate a voice-recording module to replace the simple buzzer tone.</li>
+        </ul>
 
-          <figure class="media-card">
-            <img src="print_fail_pla.jpg" alt="PLA fail" />
-            <figcaption>PLA print failure → next iteration.</figcaption>
-          </figure>
+        <figure class="media">
+          <video controls src="team_audio_test.mov"></video>
+          <figcaption>Group test: integration of the audio module with the FSR circuit.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-          <figure class="media-card">
-            <video controls src="team_audio_test.mov"></video>
-            <figcaption>Team audio integration test.</figcaption>
-          </figure>
-        </div>
+    <!-- Week 6 -->
+    <section id="week6" class="block">
+      <div class="inner">
+        <h2>Week 6 – Potentiometer and first Fusion 360 ring model</h2>
+        <ul>
+          <li>Added a potentiometer so the difficulty can be adjusted by turning a knob.</li>
+          <li>Started modeling the lower-half grip ring in Fusion 360 to hold and protect the FSR.</li>
+          <li>Iterated on basic dimensions to balance comfort, sensor protection, and printability.</li>
+        </ul>
+
+        <figure class="media">
+          <img src="fusion_ring_final.png" alt="Fusion 360 grip ring model" />
+          <figcaption>Lower-half grip ring model in Fusion 360.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Week 7 -->
+    <section id="week7" class="block">
+      <div class="inner">
+        <h2>Week 7 – Audio feedback design and print preparation</h2>
+        <ul>
+          <li>Integrated a voice-recording playback module to deliver short, personalized encouragement messages.</li>
+          <li>Finalized the main box CAD that will hold the Arduino, power supply, and audio module.</li>
+          <li>Set initial 3D printing parameters and selected materials for the first physical prototype.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Week 8 -->
+    <section id="week8" class="block">
+      <div class="inner">
+        <h2>Week 8 – First 3D print and failure analysis</h2>
+        <ul>
+          <li>Printed the first grip ring and housing components using PLA.</li>
+          <li>Tested the PLA ring in hand and realized it was too rigid and uncomfortable for repeated squeezing.</li>
+          <li>Decided to switch to TPU (flexible filament) and adjust wall thickness in the next iteration.</li>
+        </ul>
+
+        <figure class="media">
+          <img src="print_fail_pla.jpg" alt="PLA print failure" />
+          <figcaption>PLA version: mechanically successful but too rigid for comfortable grip.</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- Next steps -->
-    <section id="next-steps" class="section next-section">
-      <div class="section-inner">
-        <h2>Next Steps</h2>
+    <section id="next" class="block">
+      <div class="inner">
+        <h2>Next steps</h2>
         <ul>
-          <li>Re-print the grip ring with TPU for improved comfort.</li>
-          <li>Improve ergonomic contouring for different hand sizes.</li>
-          <li>Refine audio encouragement patterns and timing.</li>
-          <li>Conduct repeated-use sensor stability tests.</li>
-          <li>Prepare early-stage user feedback sessions.</li>
+          <li>Re-print the grip ring with TPU and compare comfort with PLA.</li>
+          <li>Refine ring ergonomics for different hand sizes and grip styles.</li>
+          <li>Tune audio encouragement patterns (content, timing, and frequency).</li>
+          <li>Run repeated-use tests to evaluate sensor stability and drift.</li>
+          <li>Plan early user feedback sessions with volunteers.</li>
         </ul>
+        <p class="small-note">
+          This page currently documents Weeks 1–8. Future weeks will be appended below as the project continues.
+        </p>
       </div>
     </section>
   </main>
 
-  <button id="backToTop" title="Back to top">↑</button>
-
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>
-        Built by Kejia Liu ·
+      <a href="#top" class="back-top-link">↑ Back to top</a>
+      <span class="footer-text">
+        · Built by Kejia Liu ·
         <a href="https://kejiali6.github.io" target="_blank">Portfolio</a> ·
         <a href="mailto:liukejia0111@163.com">liukejia0111@163.com</a>
-      </p>
+      </span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
