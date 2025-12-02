@@ -25,7 +25,7 @@
   </header>
 
   <main>
-    <!-- 介绍区 -->
+    <!-- Intro -->
     <section id="intro" class="section intro-section">
       <div class="section-inner">
         <h2>Project Overview</h2>
@@ -37,8 +37,8 @@
 
         <p>
           This project uses an FSR-402 pressure sensor, LEDs, audio feedback,
-          adjustable thresholds, and 3D-printed components. 
-          Below is the full week-by-week engineering build log.
+          adjustable thresholds, and 3D-printed components.
+          Below is the full week-by-week engineering build log (Weeks 1–8).
         </p>
 
         <div class="media-row">
@@ -55,16 +55,16 @@
       </div>
     </section>
 
-    <!-- 时间线 -->
+    <!-- Timeline -->
     <section id="timeline" class="section timeline-section">
       <div class="section-inner">
-        <h2>Build Timeline</h2>
+        <h2>Build Timeline (Weeks 1–8)</h2>
 
         <!-- Week 1 -->
         <article class="week-block">
           <h3>Week 1 – Story, Problem, and Research</h3>
           <ul>
-            <li>Documented real rehabilitation observations.</li>
+            <li>Documented real rehabilitation observations from my grandfather’s rehab experience.</li>
             <li>Created the initial problem statement and design constraints.</li>
             <li>Researched FSR-based sensing and stroke recovery methods.</li>
           </ul>
@@ -76,7 +76,7 @@
           <ul>
             <li>Reviewed feasibility and design scope with engineering faculty.</li>
             <li>Outlined the first system architecture diagram.</li>
-            <li>Drafted BOM and modular design plan.</li>
+            <li>Drafted a modular design plan and preliminary BOM.</li>
           </ul>
         </article>
 
@@ -86,8 +86,8 @@
           <div class="two-column">
             <div>
               <ul>
-                <li>Assembled breadboard prototype with FSR-402.</li>
-                <li>Developed fixed-threshold LED & buzzer feedback code.</li>
+                <li>Assembled a breadboard prototype with an FSR-402, LEDs, and a buzzer.</li>
+                <li>Developed fixed-threshold Arduino code for basic feedback.</li>
                 <li>Validated consistent real-time pressure readings.</li>
               </ul>
             </div>
@@ -106,7 +106,7 @@
           <h3>Week 4 – Lab Collaboration</h3>
           <ul>
             <li>Met with Dr. Gulick for technical and feasibility review.</li>
-            <li>Received confirmation of project value & engineering direction.</li>
+            <li>Confirmed project value, feasibility, and potential impact.</li>
             <li>Defined concrete design milestones for the next phase.</li>
           </ul>
         </article>
@@ -114,24 +114,22 @@
         <!-- Week 5 -->
         <article class="week-block">
           <h3>Week 5 – Team Formation & Adaptive Logic</h3>
-
           <div class="two-column">
             <div>
               <ul>
                 <li>Formed a multidisciplinary team (BioE + EE).</li>
                 <li>Designed adaptive threshold logic for progressive difficulty.</li>
-                <li>Prepared integration plan for voice module.</li>
+                <li>Planned integration of a voice-recording module.</li>
               </ul>
             </div>
 
             <div>
               <figure class="media-card">
                 <video controls src="team_audio_test.mov"></video>
-                <figcaption>Team integration test with audio module.</figcaption>
+                <figcaption>Team integration test with the audio module.</figcaption>
               </figure>
             </div>
           </div>
-
         </article>
 
         <!-- Week 6 -->
@@ -139,8 +137,8 @@
           <h3>Week 6 – Potentiometer & CAD Development</h3>
           <ul>
             <li>Added a potentiometer for user-adjustable difficulty.</li>
-            <li>Began Fusion 360 modeling of the grip ring (lower half).</li>
-            <li>Focused on ergonomics & FSR protection geometry.</li>
+            <li>Began Fusion 360 modeling of the lower-half grip ring.</li>
+            <li>Focused on ergonomics and FSR protection geometry.</li>
           </ul>
 
           <div class="media-row">
@@ -155,29 +153,28 @@
         <article class="week-block">
           <h3>Week 7 – Audio Feedback & Printing Prep</h3>
           <ul>
-            <li>Integrated voice-recording module.</li>
-            <li>Completed CAD preparation for main housing box.</li>
-            <li>Determined initial print parameters & materials.</li>
+            <li>Integrated a voice-recording module to replace the simple buzzer tone.</li>
+            <li>Completed CAD preparation for the main electronics housing.</li>
+            <li>Determined initial print parameters and material options.</li>
           </ul>
         </article>
 
         <!-- Week 8 -->
         <article class="week-block">
           <h3>Week 8 – First 3D Print & Failure Analysis</h3>
-
           <div class="two-column">
             <div>
               <ul>
-                <li>Printed first prototype using PLA.</li>
+                <li>Printed the first prototype using PLA.</li>
                 <li>Identified PLA rigidity issues for hand-grip comfort.</li>
-                <li>Decided to reprint with TPU for flexibility.</li>
+                <li>Decided to reprint with TPU for better flexibility.</li>
               </ul>
             </div>
 
             <div>
               <figure class="media-card">
                 <img src="print_fail_pla.jpg" alt="Failed PLA print" />
-                <figcaption>PLA print: rigid & unsuitable → switching to TPU.</figcaption>
+                <figcaption>PLA print: mechanically okay but too rigid → switching to TPU.</figcaption>
               </figure>
             </div>
           </div>
@@ -192,7 +189,6 @@
         <h2>Photo & Video Gallery</h2>
 
         <div class="gallery-grid">
-
           <figure class="media-card">
             <img src="grandpa_rehab.jpg" alt="Rehab origin" />
             <figcaption>Grandfather rehab reference.</figcaption>
@@ -222,7 +218,6 @@
             <video controls src="team_audio_test.mov"></video>
             <figcaption>Team audio integration test.</figcaption>
           </figure>
-
         </div>
       </div>
     </section>
@@ -232,9 +227,9 @@
       <div class="section-inner">
         <h2>Next Steps</h2>
         <ul>
-          <li>Re-print grip ring with TPU.</li>
+          <li>Re-print the grip ring with TPU for improved comfort.</li>
           <li>Improve ergonomic contouring for different hand sizes.</li>
-          <li>Refine audio encouragement patterns.</li>
+          <li>Refine audio encouragement patterns and timing.</li>
           <li>Conduct repeated-use sensor stability tests.</li>
           <li>Prepare early-stage user feedback sessions.</li>
         </ul>
@@ -255,7 +250,5 @@
   </footer>
 
   <script src="script.js"></script>
-
 </body>
-
 </html>
